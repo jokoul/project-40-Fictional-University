@@ -9,3 +9,9 @@ function university_files(){
 }
 //We run the function above
 add_action('wp_enqueue_scripts','university_files');//wp_enqueue_scripts define the moment to call the fn we pass the name as second parameter
+
+//Create new action to add page title
+function university_features(){
+    add_theme_support('title-tag');//title-tag is a feature we specify to wordpress
+}
+add_action('after_setup_theme','university_features');//'after_setup_theme' in 1rst parameter of add_action is a wordpress event listener who fire the function named in 2nd parameter
