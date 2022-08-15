@@ -12,6 +12,10 @@ add_action('wp_enqueue_scripts','university_files');//wp_enqueue_scripts define 
 
 //Create new action to add page title
 function university_features(){
+    // register_nav_menu('headerMenuLocation','Header Menu Location');//to create a new menu section in ashboard
+    // register_nav_menu('footerLocationOne','Footer Location One');
+    // register_nav_menu('footerLocationTwo','Footer Location Two');
+
     add_theme_support('title-tag');//title-tag is a feature we specify to wordpress
 }
 add_action('after_setup_theme','university_features');//'after_setup_theme' in 1rst parameter of add_action is a wordpress event listener who fire the function named in 2nd parameter
